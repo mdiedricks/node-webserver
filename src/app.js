@@ -53,17 +53,13 @@ app.get("/weather", (req, res) => {
   }
   geocode(req.query.address, (error, { center, place_name } = {}) => {
     if (error) {
-      console.log("Error in geocode");
       return res.send({ error });
     }
 
-    console.log("Passed geocode...");
     forecast(center[0], center[1], (error, forecastData) => {
       if (error) {
-        console.log("Error in forecast...");
         return res.send({ error });
       }
-      console.log("Passed forecast...");
       res.send({
         location: place_name,
         lat: forecastData.location.lat,

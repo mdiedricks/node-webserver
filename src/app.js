@@ -67,6 +67,7 @@ app.get("/weather", (req, res) => {
         address: req.query.address,
         temperature: forecastData.current.temperature,
         humidity: forecastData.current.humidity,
+        desc: forecastData.current.weather_descriptions,
       });
     });
   });

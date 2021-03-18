@@ -20,7 +20,7 @@ weatherForm.addEventListener("submit", (e) => {
       console.log(data);
       messageOne.textContent = data.name;
       messageTwo.textContent = `Lat ${data.lat}, Lon ${data.lon}`;
-      messageThree.textContent = `Humidity is ${data.humidity}%, and temp is ${data.temperature}`;
+      messageThree.textContent = data.desc;
     });
   });
 });

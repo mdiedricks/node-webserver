@@ -9,7 +9,7 @@ const forecast = (lat, lon, callback) => {
     } else if (body.error) {
       callback("Request parameters incorrect. Please try again");
     } else {
-      callback(undefined, body.location);
+      callback(undefined, body);
     }
   });
 };
